@@ -1,0 +1,12 @@
+{
+    "require": {
+        "bcosca/fatfree-core": "^3.9",
+        "ikkez/f3-falsum": "^2.8",
+        "ikkez/f3-flash": "^1.0",
+        "ikkez/f3-cortex": "^1.7",
+        "ikkez/f3-pagination": "^1.4",
+        "ikkez/f3-mailer": "^1.2",
+        "twig/twig": "^3.21",
+        "nesbot/carbon": "^3.10"
+    }
+}

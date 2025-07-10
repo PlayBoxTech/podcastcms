@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<html>
+<head>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+</head>
+<body>
+    <h1>{{ title }}</h1>
+
+    <p>Welcome to our blog, brought to you by {{ author }}!</p>
+
+    <h2>Latest Posts</h2>
+    {% if blog_posts is not empty %}
+        <ul>
+            {% for post in blog_posts %}
+                <li>
+                    <h3>{{ post.title }}</h3>
+                    <p>{{ post.content }}</p>
+                    <a href="/blog/{{ post.id }}">Read More</a> {# Example link if you add a detail route #}
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No blog posts found yet.</p>
+    {% endif %}
+
+    <footer>
+        <p>&copy; {{ current_year }} {{ company_name|default('My Blog') }}. All rights reserved.</p>
+    </footer>
+</body>
+</html>
