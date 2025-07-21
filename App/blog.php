@@ -8,7 +8,10 @@ class blog {
         $f3->set('content', 'This is the home page of my blog. Stay tuned for more updates!');
 
         // Render the index template
-        //echo $f3->get('twig')->render('templates/index.html');
-        echo "test</p>";
+        echo $f3->get('twig')->render('index.html',[
+            'title' => $f3->get('title'),
+            'content' => $f3->get('content')
+        ]);
+        //echo "test</p>";
     }
 } 
